@@ -1,35 +1,35 @@
 import React, { useState } from 'react';
 
-function BookingForm() {
+function BookingForm({ availableTimes, updateTimes }) {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('Birthday');
 
-  const [availableTimes] = useState([
-    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-  ]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', { date, time, guests, occasion });
+    console.log('Form submitted:', { date, guests, occasion });
   };
-
+  const handleDateChange = (date) => {
+    console.log('handleDateChange')
+    setDate(date)
+    updateTimes(date);
+  };
   return (
     <form style={{ display: 'grid', maxWidth: '500px', gap: '20px' }} onSubmit={handleSubmit}>
-      <div class="mb-3">
-        <label htmlFor="res-date" classNaame="form-label">Choose date</label>
+      <div className="mb-3">
+        <label htmlFor="res-date" className="form-label">Choose date</label>
         <input
           className="form-control"
           type="date"
           id="res-date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e)=>handleDateChange(e.target.value)}
           required
         />
       </div>
-      <div class="mb-3">
-      <label htmlFor="res-time" classNaame="form-label">Choose time</label>
+      <div className="mb-3">
+      <label htmlFor="res-time" className="form-label">Choose time</label>
         <select
           className="form-select"
           id="res-time"
@@ -44,8 +44,8 @@ function BookingForm() {
           ))}
         </select>
       </div>
-      <div class="mb-3">
-        <label htmlFor="guests" classNaame="form-label">Number of guests</label>
+      <div className="mb-3">
+        <label htmlFor="guests" className="form-label">Number of guests</label>
         <input
           className="form-control"
           type="number"
@@ -58,10 +58,10 @@ function BookingForm() {
           required
         />
       </div>
-      <div class="mb-3">
-        <label htmlFor="occasion" classNaame="form-label">Occasion</label>
+      <div className="mb-3">
+        <label htmlFor="occasion" className="form-label">Occasion</label>
         <select
-          class="form-select"
+          className="form-select"
           id="occasion"
           value={occasion}
           onChange={(e) => setOccasion(e.target.value)}
