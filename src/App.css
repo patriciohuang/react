@@ -95,6 +95,16 @@ header nav ul li {
 footer ul {
   padding: 0;
 }
+#reservation h2{
+  text-align: center;
+}
+#reservation > div, #reservation form{
+  margin: 100px auto;
+}
+#submitbutton {
+  color: #495e57;
+  background-color: #f4ce14;
+}
 @media only screen and (max-width: 768px) {
   h2 {
     text-align: center;
