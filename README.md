@@ -2,7 +2,9 @@
 Little Lemon is a web application, built using React that enables users to share and discover delicious foods.
 
 ## Features
--Book Tables: booking available tables.
+- Book Tables: booking available tables.
+- See the Menu: See the menu of the restaurant.
+- See testimonials: You can see testimonials of the other coustomes.
 
 ## Installation
 
@@ -18,18 +20,11 @@ cd react
 
 npm install
 
-4. Install the JSON server and run it:
-
-npm install json-server
-npx json-server --watch public/data.json
-
-5. Start the Development Server: Launch the development server:
+4. Start the Development Server: Launch the development server:
 
 npm start
 
-6. If prompted to choose a different port, type Y (yes).
-
-7. Now you can view the Little Lemon application in your web browser.
+5. Now you can view the Little Lemon application in your web browser.
 
 ## Contributing
 Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
