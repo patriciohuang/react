@@ -6,7 +6,7 @@ function Home() {
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p className="my-4">We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button id="reserve-button"><a href="/">Reserve a table</a></button>
+          <button className="button"><a href="/reservation">Reserve a table</a></button>
         </div>
         <div id="info-img">
           <img src="/img/restauranfood.jpg" alt="Restaurant Food"/>

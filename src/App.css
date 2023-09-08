@@ -47,7 +47,7 @@ header nav ul li {
   object-fit: cover;
   border-radius: 20px;
 }
-#reserve-button {
+.button {
   background-color: #f4ce14;
   width: 200px;
   height: 60px;
@@ -98,12 +98,31 @@ footer ul {
 #reservation h2{
   text-align: center;
 }
-#reservation > div, #reservation form{
+#reservation > div, #reservation form, #confirmed, #confirmed > div {
   margin: 100px auto;
 }
 #submitbutton {
   color: #495e57;
   background-color: #f4ce14;
+}
+#submitbutton:disabled {
+  color: #fff;
+  background-color: #564909;
+}
+#confirmed > div {
+  width: 50%;
+}
+#confirmed-img{
+  width: 20%;
+  margin: 0 auto;
+}
+#confirmed-img img {
+  width: 100%;
+}
+#confirmed-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media only screen and (max-width: 768px) {
   h2 {
