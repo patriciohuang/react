@@ -143,7 +143,7 @@ footer ul {
   .card-body > div {
     height: 25vh;
   }
-  #img-group {
+  #img-group, form {
     width: 90%;
     height: auto;
   }
