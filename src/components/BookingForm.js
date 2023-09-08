@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-
-function BookingForm({ availableTimes, updateTimes }) {
+import { useNavigate } from 'react-router-dom';
+function BookingForm({ availableTimes, updateTimes, submitForm }) {
+  const navigate = useNavigate();
   const [date, setDate] = useState('');
   const [time, setTime] = useState('17:00');
   const [guests, setGuests] = useState(1);
@@ -8,10 +9,10 @@ function BookingForm({ availableTimes, updateTimes }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', { date, guests, occasion });
+    submitForm({ date, time, guests, occasion });
+    navigate('/confirmation');
   };
   const handleDateChange = (date) => {
-    console.log('handleDateChange')
     setDate(date)
     updateTimes(date);
   };
