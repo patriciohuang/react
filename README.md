@@ -26,8 +26,5 @@ npm start
 
 5. Now you can view the Little Lemon application in your web browser.
 
-## Contributing
-Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
-
 ## Authors
-Patricio Huang - Primary author and developer of Little Lemon.
+Patricio Huang
