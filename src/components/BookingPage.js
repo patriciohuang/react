@@ -5,7 +5,7 @@ const ACTIONS = {
   UPDATE_TIMES: 'update-times'
 }
 
-const initialAvailableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+export const initialAvailableTimes = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
 
 function bookingReducer(state, action){
   switch (action.type) {
